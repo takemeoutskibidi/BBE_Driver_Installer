@@ -1,0 +1,32 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+DriverVer=04/06/2025,1.0.0.0
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTx64
+
+[Standard.NTx64]
+%DeviceDesc%=DriverInstall, Root\BootBusExtender
+
+[DriverInstall]
+CopyFiles=DriverCopy
+
+[DriverCopy]
+BootBusExtender.sys
+
+[DestinationDirs]
+DriverCopy=12
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+BootBusExtender.sys = 1
+
+[Strings]
+ManufacturerName = "BootBusDev"
+DeviceDesc = "Boot Bus Extender Hello Driver"
+DiskName = "Boot Bus Install Disk"
